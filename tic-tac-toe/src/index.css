@@ -1,0 +1,45 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.conteiner{
+  display: grid;
+  grid-template-columns: repeat(3, 5.5rem);
+  grid-template-rows: repeat(3, 5.5rem);
+}
+.sell{
+  width: 5.5rem;
+  aspect-ratio: 1;
+  border: solid rgb(121, 249, 144) .15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.figur{
+  font-size: 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.restart{
+  padding: 0.5rem;
+}
+.restart:hover{
+  border-radius: 0.3rem;
+  border-color:rgb(121, 249, 144);
+}
