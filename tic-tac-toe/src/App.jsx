@@ -30,7 +30,7 @@ function MainDesk() {
     [seven, eight, nine],
   ];
   //set winer to darw from the start
-  const [win, setWin] = useState("Draw");
+  const [win, setWin] = useState("Start");
   //print O ans X onclick
   function handleClick(el, webEl) {
 
@@ -80,7 +80,6 @@ function MainDesk() {
     }
   }
   const [stop, setStop] = useState("");
-
  //find out winer  
   useEffect(() => {
     for(let i = 0; i < web.length; i++) {
@@ -104,12 +103,15 @@ function MainDesk() {
         }
     }
   }
+  if(turn >= 9 ) {
+    setWin("Draw")
+  }
 }, [turn]);
 
 // restart button
   function restart() {
     setStop("");
-    setWin("Draw");
+    setWin("Start");
     setone('');
     settwo('');
     setthree('');
@@ -206,7 +208,7 @@ function MainDesk() {
         </button>
       </div>
       <div className="printWin">
-        <h2 className="winer">{win}</h2>
+        <h2 className="winer" >{win}</h2>
       </div>
       <button className="restart" onClick={() => restart()}>Restart</button>
     </div>
